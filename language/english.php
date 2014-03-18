@@ -21,29 +21,27 @@ if ( !defined('EQDKP_INC') ){
 }
 $english_array =  array(
 	'classes' => array(
-		0 => 'Unknown',
-		1 => 'Champion',
-		2 => 'Druid',
-		3 => 'Knight',
-		4 => 'Mage',
-		5 => 'Priest',
-		6 => 'Rogue',
-		7 => 'Scout',
-		8 => 'Warden',
-		9 => 'Warlock',
-	   10 => 'Warrior',
+		0	=> 'Unknown',
+		1	=> 'Champion',
+		2	=> 'Druid',
+		3	=> 'Knight',
+		4	=> 'Mage',
+		5	=> 'Priest',
+		6	=> 'Rogue',
+		7	=> 'Scout',
+		8	=> 'Warden',
+		9	=> 'Warlock',
+	   10	=> 'Warrior',
 	),
 
 	'races' => array(
-		'Human',
-		'Elf',
-		'Dwarf'
-	),
-	'factions' => array(
-		'Default',
+		0	=> 'Unbekannt',
+		1	=> 'Human',
+		2	=> 'Elf',
+		3	=> 'Dwarf'
 	),
 	'lang' => array(
-		'rom' => 'Runes of Magic',
+		'rom'			=> 'Runes of Magic',
 	),
 );
 

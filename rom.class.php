@@ -22,21 +22,47 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('rom')) {
 	class rom extends game_generic {
-		public static $shortcuts = array();
+		public $version			= '0.1';
 		protected $this_game	= 'rom';
 		protected $types		= array('classes', 'races', 'factions', 'filters');
-		public $icons			= array('classes', 'classes_big', 'races', 'events');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $factions		= array();
 		protected $filters		= array();
 		public $langs			= array('english', 'german');
 
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'race',
+				'type'		=> 'races',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'parent'	=> false,
+			),
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> array(
+					'race' => array(
+						0 	=> 'all',			// Unknown
+						1 	=> 'all',			// Human
+						2 	=> 'all',			// Elf
+						3 	=> 'all',			// Dwarf
+					),
+				),
+			),
+		);
+
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= false;
 		public $lang			= false;
-		public $version			= '0.1';
 
 		/**
 		* Initialises filters
@@ -56,8 +82,6 @@ if(!class_exists('rom')) {
 			}
 		}
 		public function get_OnChangeInfos($install=false){
-			//classcolors
-
 			$info['aq'] = array();
 
 			//Do this SQL Query NOT if the Eqdkp is installed -> only @ the first install
@@ -67,5 +91,4 @@ if(!class_exists('rom')) {
 		}
 	}
 }
-if(version_compare(PHP_VERSION, '5.3.0', '<')) registry::add_const('short_rom', rom::$shortcuts);
 ?>
