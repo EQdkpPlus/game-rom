@@ -31,7 +31,7 @@ $english_array =  array(
 		7	=> 'Scout',
 		8	=> 'Warden',
 		9	=> 'Warlock',
-	   10	=> 'Warrior',
+		10	=> 'Warrior',
 	),
 
 	'races' => array(
@@ -41,7 +41,10 @@ $english_array =  array(
 		3	=> 'Dwarf'
 	),
 	'lang' => array(
-		'rom'			=> 'Runes of Magic',
+		'rom'						=> 'Runes of Magic',
+		'uc_race'					=> 'Race',
+		'uc_class'					=> 'Class',
+		
 	),
 );
 

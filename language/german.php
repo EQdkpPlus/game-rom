@@ -31,7 +31,7 @@ $german_array = array(
 		7	=> 'Kundschafter',
 		8	=> 'Bewahrer',
 		9	=> 'Hexenmeister',
-	   10	=> 'Krieger',
+		10	=> 'Krieger',
 	),
 	'races' => array(
 		0	=> 'Unbekannt',
@@ -40,7 +40,10 @@ $german_array = array(
 		3	=> 'Zwerg'
 	),
 	'lang' => array(
-		'rom'			=> 'Runes of Magic',
+		'rom'						=> 'Runes of Magic',
+		'uc_race'					=> 'Rasse',
+		'uc_class'					=> 'Klasse',
+		
 	),
 );
 
